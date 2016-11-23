@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:RecallRosterXamarin"
+		x:Class="RecallRosterXamarin.MembersPage"
+		>
+
+	<!--ToDo Add New Back Button
+
+	How to call JavaScript from C#
+	https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/call-javascript/
+
+	How To Resize Images
+	http://resizeimage.net
+	-->
+	
+		<ListView x:Name="ListView1" >
+		<ListView.ItemTemplate>
+		<DataTemplate >
+		<ViewCell  >
+		 <Grid >
+				
+		  <Label Grid.Column="0" Text="{Binding FirstName}" FontAttributes="Bold" Margin="20,0,0,0" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" />
+          <Label Grid.Column="1" Text="{Binding LastName}" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+          <Button x:Name="callbtn" Clicked="OnPhoneTapped" Grid.Column="2" Text="{Binding TelephoneNumber}" />
+			
+        </Grid>
+      </ViewCell>
+    </DataTemplate>
+  </ListView.ItemTemplate>
+</ListView>
+		
+</ContentPage>

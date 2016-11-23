@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="RecallRosterXamarin.RecallRosterXamarinPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RecallRosterXamarin">
+    <ContentPage.Content>
+
+
+
+
+        <StackLayout Orientation="Vertical" Padding="5">
+
+        <StackLayout Spacing="0">
+			<Label Margin="5,5,0,15"
+					Text="Sign in With Your USAF Account"/>	
+				
+		</StackLayout>
+
+			
+            <StackLayout Spacing="0" >
+                <Label FontSize="Medium" Text="UserName" />
+                    <Entry x:Name="UserName"
+                          WidthRequest="150"
+                           Keyboard="Email" />
+            </StackLayout>
+
+            <StackLayout Spacing="0">
+                <Label Text="PassWord" />
+               
+                    <Entry x:Name="PassWord"
+                         WidthRequest="150"
+                           Keyboard="Default"
+						IsPassword="true"
+					/>
+             
+            </StackLayout>
+			
+
+		 
+			
+            <!--Login Button-->
+            <StackLayout Spacing="0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5" >
+
+					<Button x:Name="LoginBtn"
+							IsVisible="true"
+							WidthRequest="150"
+                            Clicked="Post"
+                            Text="Login"
+							BackgroundColor="Blue"
+							TextColor="White"
+						/>
+
+					<ActivityIndicator x:Name="SpinnerIcon"
+                           IsVisible="false"
+							Margin="14"
+							WidthRequest="150"
+                           IsRunning="false"
+							IsEnabled="false"
+                           Color="Black" />
+					
+                </StackLayout>
+            </StackLayout>
+			<!--End of Login Button-->
+
+			<Label VerticalOptions="EndAndExpand" Text="By Signing in you are agreeing to terms and conditions."/>
+			
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
