@@ -53,11 +53,13 @@
 
 					<ActivityIndicator x:Name="SpinnerIcon"
                            IsVisible="false"
-							Margin="14"
+							
 							WidthRequest="150"
-                           IsRunning="false"
+							HeightRequest="50"
+                            IsRunning="false"
 							IsEnabled="false"
-                           Color="Black" />
+                           Color="White"
+						BackgroundColor="Blue"/>
 					
                 </StackLayout>
             </StackLayout>
